@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import styles from './Menu.module.scss';
 import { Wrapper as PopperWrapper } from '../../Popper';
 import MenuItem from './MenuItem.js';
+import Header from './Header.js';
 
 const cx = classNames.bind(styles);
 
@@ -17,6 +18,7 @@ function Menu({ children, items = [] }) {
             delay={[0, 700]}
             render={(attrs) => (
                 <div className={cx('menu-list')} tabIndex="-1" {...attrs}>
+                    <Header title="Language" />
                     <PopperWrapper className={cx('menu-popper')}>{renderItems()}</PopperWrapper>
                 </div>
             )}
