@@ -9,8 +9,6 @@ import {
     faLanguage,
     faCircleQuestion,
     faKeyboard,
-    faCloudUpload,
-    faMessage,
     faCoins,
     faUser,
     faSignOut,
@@ -27,6 +25,7 @@ import images from '../../../../assets/images';
 import Button from '../../../Button';
 import Menu from '../../../Popper/Menu';
 import { UploadIcon } from '../../../Icons';
+import Image from '../../../Image';
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
@@ -150,7 +149,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/b3f7f28c9cc346da9aea5d64b186da21.jpeg?lk3s=a5d48078&nonce=58065&refresh_token=96181c7569261640e1d30cc1535dc286&x-expires=1720083600&x-signature=Ymr8xHLmQA81iYi%2BfX0uTk%2BlyJ4%3D&shp=a5d48078&shcp=b59d6b55"
                                 alt="Nguyen Van A"
                                 className={cx('user-avatar')}
